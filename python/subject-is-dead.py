@@ -1,8 +1,9 @@
-from __future__ import print_function
+import re
 
-def subject():
-    while True:
-        yield "[Subject] is dead, long live"
+subject = "[Subject] is dead, long live [Subject]"
+regex   = r"\[Subject\]";
 
 if __name__ == "__main__":
-    for s in subject(): print(s, end=" ")
+    while re.match(regex, subject):
+        subject = re.sub(regex, subject, subject)
+        print(subject)

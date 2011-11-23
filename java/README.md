@@ -1,0 +1,1 @@
+`javac Subject.java && java Subject`.

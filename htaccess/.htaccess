@@ -1,0 +1,5 @@
+# Tested in MAMP 2.05, Apache/2.2.21
+
+RewriteEngine on
+RewriteCond %{QUERY_STRING} (.*)(.*)\1
+RewriteRule .* /?%1%2%1%2%1 [R,NE]

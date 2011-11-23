@@ -1,5 +1,8 @@
 # Tested in MAMP 2.05, Apache/2.2.21
 
 RewriteEngine on
-RewriteCond %{QUERY_STRING} (.*)(.*)\1
-RewriteRule .* /?%1%2%1%2%1 [R,NE]
+
+# Note: mod_rewrite seems to just die after a dozen or so redirects using
+# ^(.+?)((.*?\1)+)$ possibly because it's INSANELY SLOW AND IDIOTIC
+RewriteCond %{QUERY_STRING} ^(\[Subject\])((.*?\1)+)$
+RewriteRule .* /?%1%3%2 [R,NE]

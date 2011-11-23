@@ -16,3 +16,5 @@ Here's what you do:
 	- For the given string "[Subject] is dead, long live [Subject]"
 	- Create an infinite loop, each time replacing "[Subject]" with "[Subject] is dead, long live [Subject]"
 4. Record the results of the crash with a screen shot
+
+Multiple approaches for the same language are welcome! Just give yours a different name and add the instructions to the readme in that directory. \BOOM/
